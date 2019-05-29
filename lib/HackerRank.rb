@@ -32,4 +32,8 @@ module HackerRank
       puts "It's an unknown model"
     end
   end
+
+  def self.transcode(string)
+    string.encode('UTF-8')
+  end
 end
