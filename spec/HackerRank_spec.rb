@@ -7,6 +7,13 @@ RSpec.describe HackerRank do
     expect(true).to eq(true)
   end
 
+  it "counts a multibyte chars" do
+    string = "¥1000"
+    expected = 1
+    result = HackerRank.count_multibyte_char(string)
+    expect(result).to eq(expected)
+  end
+
   it "transcodes a string" do
     string = "You have successfully completed the encoding challenge.".encode("iso-8859-1")
 

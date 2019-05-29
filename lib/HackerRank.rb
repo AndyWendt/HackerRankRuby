@@ -44,4 +44,14 @@ module HackerRank
     average = (first + second) / 2
     "#{serial}-#{sprintf('%.2f', average.round(2))}"
   end
+
+  def self.count_multibyte_char(string)
+    chars = 0
+
+    string.each_char do |char|
+      chars += 1 if char.bytesize > 1
+    end
+
+    chars
+  end
 end
