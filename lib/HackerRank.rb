@@ -36,4 +36,12 @@ module HackerRank
   def self.transcode(string)
     string.encode!(Encoding::UTF_8, Encoding::ISO_8859_1)
   end
+
+  def self.serial_average(input)
+    serial = input[0,3]
+    first = input[4,8].to_f
+    second = input[10,14].to_f
+    average = (first + second) / 2
+    "#{serial}-#{sprintf('%.2f', average.round(2))}"
+  end
 end

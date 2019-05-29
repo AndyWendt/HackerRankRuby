@@ -15,6 +15,13 @@ RSpec.describe HackerRank do
     expect(result).to eq(string)
   end
 
+  it "averages serial numbers" do
+    input = '001-12.43-56.78'
+    expected = '001-34.61'
+    result = HackerRank.serial_average input
+
+    expect(result).to eq(expected)
+  end
   it "correctly identifies classes" do
     [
         [Hacker.new, "It's a Hacker!"],
