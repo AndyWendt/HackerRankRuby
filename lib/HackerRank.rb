@@ -10,7 +10,7 @@ module HackerRank
   end
 
   def self.identify_class(obj)
-    case obj
+    case obj.class.name
     # if Hacker, output "It's a Hacker!"
     when "Hacker"
       puts "It's a Hacker!"
