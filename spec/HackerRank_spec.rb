@@ -45,6 +45,13 @@ RSpec.describe HackerRank do
       $stdout = save_stdout
     end
   end
+
+  it "joins strings without whitespace" do
+    strings = ["Hi, \n", " Are you having fun?    "]
+    expected = "Hi, Are you having fun?"
+    result = HackerRank.process_text(strings)
+    expect(result).to eq(expected)
+  end
 end
 
 class Hacker

@@ -54,4 +54,14 @@ module HackerRank
 
     chars
   end
+
+  def self.process_text(strings)
+    strings.reduce("") do |carry, string|
+      if carry == ""
+        string.strip
+      else
+        carry + " " + string.strip
+      end
+    end
+  end
 end
