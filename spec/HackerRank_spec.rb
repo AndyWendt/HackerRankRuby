@@ -8,13 +8,11 @@ RSpec.describe HackerRank do
   end
 
   it "transcodes a string" do
-    string = "test".encode("iso-8859-1")
-    begin
-      result = HackerRank.transcode(string)
-      expect(result.encoding.name).to eq('UTF-8')
-    rescue
-      fail
-    end
+    string = "You have successfully completed the encoding challenge.".encode("iso-8859-1")
+
+    result = HackerRank.transcode(string)
+    expect(result.encoding.name).to eq('UTF-8')
+    expect(result).to eq(string)
   end
 
   it "correctly identifies classes" do

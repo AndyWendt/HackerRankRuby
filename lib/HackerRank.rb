@@ -34,6 +34,6 @@ module HackerRank
   end
 
   def self.transcode(string)
-    string.encode('UTF-8')
+    string.encode!(Encoding::UTF_8, Encoding::ISO_8859_1)
   end
 end
