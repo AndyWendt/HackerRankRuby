@@ -52,6 +52,18 @@ RSpec.describe HackerRank do
     result = HackerRank.process_text(strings)
     expect(result).to eq(expected)
   end
+
+  it "strikes a given string" do
+    input = {
+        "Meow!" => "<strike>Meow!</strike>",
+        "Foolan Barik" => "<strike>Foolan Barik</strike>",
+    }
+
+    input.each do |string, expected|
+      result = HackerRank.strike(string)
+      expect(result).to eq(expected)
+    end
+  end
 end
 
 class Hacker

@@ -64,4 +64,8 @@ module HackerRank
       end
     end
   end
+
+  def self.strike(string)
+    "<strike>#{string}</strike>"
+  end
 end
