@@ -68,4 +68,9 @@ module HackerRank
   def self.strike(string)
     "<strike>#{string}</strike>"
   end
+
+  def self.mask_article(string, strikes)
+    strikes.each { |word_to_strike| string.gsub!(word_to_strike, strike(word_to_strike)) }
+    return string
+  end
 end

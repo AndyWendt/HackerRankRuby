@@ -53,6 +53,20 @@ RSpec.describe HackerRank do
     expect(result).to eq(expected)
   end
 
+  it "masks an article" do
+    input = [
+        ["Hello World! This is crap!", ["crap"], "Hello World! This is <strike>crap</strike>!"],
+    ]
+
+    input.each do |array|
+      string = array[0]
+      strikes = array[1]
+      expected = array[2]
+      result = HackerRank.mask_article(string, strikes)
+      expect(result).to eq(expected)
+    end
+  end
+
   it "strikes a given string" do
     input = {
         "Meow!" => "<strike>Meow!</strike>",
