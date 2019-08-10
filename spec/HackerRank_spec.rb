@@ -78,6 +78,17 @@ RSpec.describe HackerRank do
       expect(result).to eq(expected)
     end
   end
+
+  it "calculates N palindromic prime numbers" do
+    input = {
+        5 => [2, 3, 5, 7, 11],
+    }
+
+    input.each do |n, expected|
+      result = HackerRank.palindromic_primes(n)
+      expect(result).to eq(expected)
+    end
+  end
 end
 
 class Hacker

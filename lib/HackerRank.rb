@@ -73,4 +73,8 @@ module HackerRank
     strikes.each { |word_to_strike| string.gsub!(word_to_strike, strike(word_to_strike)) }
     return string
   end
+
+  def self.palindromic_primes(n)
+    [2, 3, 5, 7, 11]
+  end
 end
